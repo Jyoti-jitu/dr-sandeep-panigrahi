@@ -61,7 +61,7 @@ const clinicalServices = [
       "Strategies to boost medication and monitoring compliance",
       "Use of wearable and mobile health reminders to sustain adherence",
     ],
-    image: "/images/article_physical_activity.png",
+    image: "/images/doctor_clinical_desk.jpg",
   },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   MapPin,
@@ -12,6 +13,8 @@ import {
   Building2,
   Calendar,
   MessageSquare,
+  ShieldCheck,
+  Stethoscope,
 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { contactDetails, doctorProfile } from "@/lib/data";
@@ -228,6 +231,45 @@ export default function ContactPage() {
 
             {/* Right Column: Address & Department Information */}
             <div className="lg:col-span-5 space-y-6">
+              {/* Doctor Official Academic & Faculty Card */}
+              <div className="p-6 rounded-xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="relative w-20 h-26 sm:w-24 sm:h-30 rounded-lg overflow-hidden border border-[#CBD5E1] shadow-2xs shrink-0 bg-[#F8F7F2]">
+                    <Image
+                      src={doctorProfile.images.redFormal}
+                      alt={doctorProfile.name}
+                      fill
+                      sizes="100px"
+                      className="object-cover object-top"
+                    />
+                  </div>
+
+                  <div>
+                    <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#006D68] bg-[#E6F4F1] px-2 py-0.5 rounded-full border border-[#BCE3DE]">
+                      <ShieldCheck className="w-3 h-3" />
+                      Verified Academic Physician
+                    </span>
+                    <h3 className="font-serif font-bold text-base sm:text-lg text-[#102A43] leading-snug mt-1.5">
+                      {doctorProfile.name}
+                    </h3>
+                    <p className="text-xs text-[#006D68] font-semibold mt-0.5">
+                      {doctorProfile.credentialsText}
+                    </p>
+                    <p className="text-[11px] text-[#627D98] mt-1 leading-snug">
+                      Professor, Department of Community Medicine
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-[#ECEFF1] flex items-center justify-between text-xs text-[#627D98]">
+                  <span className="flex items-center gap-1 text-[#006D68] font-medium">
+                    <Stethoscope className="w-3.5 h-3.5" />
+                    IMS & SUM Hospital Desk
+                  </span>
+                  <span className="font-mono text-[11px] text-[#243B53]">Bhubaneswar, Odisha</span>
+                </div>
+              </div>
+
               {/* Institution Details */}
               <div className="p-6 rounded-xl bg-white border border-[#E2E8F0] shadow-2xs space-y-4">
                 <h3 className="font-serif text-lg font-bold text-[#102A43] flex items-center gap-2">

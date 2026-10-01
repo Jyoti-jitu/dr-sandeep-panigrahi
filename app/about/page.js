@@ -144,43 +144,100 @@ export default function AboutPage() {
       </section>
 
       {/* Teaching, Mentorship & Public Engagement */}
-      <section className="py-12 sm:py-16 bg-white border-b border-[#E2E8F0]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white border-b border-[#E2E8F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-md bg-[#F8F7F2] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-4">
-                <GraduationCap className="w-5 h-5" />
+          <SectionHeading
+            eyebrow="ACADEMIC LEADERSHIP"
+            title="Teaching, Mentorship & Public Health Engagement"
+            subtitle="Instructing future physicians, directing postgraduate epidemiological research, and leading community health outreach."
+            className="mb-8 sm:mb-10"
+          />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Left: Authentic Institutional Faculty Photo Card */}
+            <div className="lg:col-span-4 bg-[#F8F7F2] border border-[#CBD5E1] rounded-xl overflow-hidden p-5 shadow-2xs space-y-4">
+              <div className="relative aspect-square w-full rounded-lg overflow-hidden border border-[#CBD5E1] shadow-2xs bg-white">
+                <Image
+                  src={doctorProfile.images.academicLanyard}
+                  alt="Prof. Dr. Sandeep Kumar Panigrahi at institutional medical faculty event"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                  className="object-cover object-top hover:scale-103 transition-transform duration-300"
+                />
               </div>
-              <h3 className="font-serif font-bold text-lg text-[#102A43] mb-2">
-                Medical Teaching & Training
-              </h3>
-              <p className="text-xs sm:text-sm text-[#627D98] leading-relaxed">
-                Active in instructing undergraduate (MBBS) and postgraduate (MD) medical scholars in clinical epidemiology, community diagnosis, preventive medicine, and research methodology.
-              </p>
+
+              <div>
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#006D68] bg-[#E6F4F1] px-2.5 py-0.5 rounded-full border border-[#BCE3DE] uppercase">
+                  Institutional Medical Faculty
+                </span>
+                <h3 className="font-serif font-bold text-base text-[#102A43] mt-1.5">
+                  Prof. Dr. Sandeep Kumar Panigrahi
+                </h3>
+                <p className="text-xs text-[#006D68] font-semibold mt-0.5">
+                  Professor of Community Medicine
+                </p>
+                <p className="text-xs text-[#627D98] mt-1 leading-relaxed">
+                  IMS & SUM Hospital, Siksha &apos;O&apos; Anusandhan (SOA) Deemed to be University, Bhubaneswar
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-[#E2E8F0] text-[11px] text-[#486581] leading-relaxed italic">
+                &ldquo;Medical education must synthesize bedside diagnostic rigor with proactive population health and compassionate care.&rdquo;
+              </div>
             </div>
 
-            <div className="p-6 rounded-md bg-[#F8F7F2] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-4">
-                <Users className="w-5 h-5" />
+            {/* Right: 3 Mentorship & Instruction Cards */}
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="p-5 sm:p-6 rounded-xl bg-[#F8F7F2] border border-[#E2E8F0] flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-3.5">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-serif font-bold text-base text-[#102A43] mb-2 leading-snug">
+                    Medical Teaching & Training
+                  </h4>
+                  <p className="text-xs text-[#627D98] leading-relaxed">
+                    Instructing undergraduate (MBBS) and postgraduate (MD) scholars in clinical epidemiology, community diagnosis, preventive medicine, and research methodology.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-[#E2E8F0] text-[11px] font-semibold text-[#006D68]">
+                  MBBS & MD Scholars
+                </div>
               </div>
-              <h3 className="font-serif font-bold text-lg text-[#102A43] mb-2">
-                Postgraduate Dissertation Mentorship
-              </h3>
-              <p className="text-xs sm:text-sm text-[#627D98] leading-relaxed">
-                Guiding clinical and community health residents through empirical field research, trial protocol formulation, statistical analysis, and peer-reviewed publishing.
-              </p>
-            </div>
 
-            <div className="p-6 rounded-md bg-[#F8F7F2] border border-[#E2E8F0]">
-              <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-4">
-                <HeartHandshake className="w-5 h-5" />
+              <div className="p-5 sm:p-6 rounded-xl bg-[#F8F7F2] border border-[#E2E8F0] flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-3.5">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-serif font-bold text-base text-[#102A43] mb-2 leading-snug">
+                    Dissertation Mentorship
+                  </h4>
+                  <p className="text-xs text-[#627D98] leading-relaxed">
+                    Guiding medical residents through empirical field studies, trial protocol design, biostatistical analysis, and publication in peer-reviewed indexed journals.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-[#E2E8F0] text-[11px] font-semibold text-[#006D68]">
+                  Postgraduate Theses
+                </div>
               </div>
-              <h3 className="font-serif font-bold text-lg text-[#102A43] mb-2">
-                Community Health Initiatives
-              </h3>
-              <p className="text-xs sm:text-sm text-[#627D98] leading-relaxed">
-                Directing outreach camps, screening programs for non-communicable diseases, health literacy workshops, and collaboration with local health administrators across Odisha.
-              </p>
+
+              <div className="p-5 sm:p-6 rounded-xl bg-[#F8F7F2] border border-[#E2E8F0] flex flex-col justify-between">
+                <div>
+                  <div className="w-10 h-10 rounded-full bg-[#E6F4F1] flex items-center justify-center text-[#006D68] mb-3.5">
+                    <HeartHandshake className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-serif font-bold text-base text-[#102A43] mb-2 leading-snug">
+                    Community Initiatives
+                  </h4>
+                  <p className="text-xs text-[#627D98] leading-relaxed">
+                    Conducting outreach clinics, non-communicable disease screenings, health literacy workshops, and rural health collaborations across Odisha.
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-[#E2E8F0] text-[11px] font-semibold text-[#006D68]">
+                  Community Outreach
+                </div>
+              </div>
             </div>
           </div>
         </div>

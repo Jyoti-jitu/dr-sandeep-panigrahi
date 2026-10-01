@@ -75,13 +75,13 @@ export default function AppointmentCTA() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="w-full max-w-md bg-[#F8F7F2] border border-[#CBD5E1] rounded-2xl overflow-hidden shadow-lg p-5 sm:p-6 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-[#006D68] shrink-0 shadow-xs bg-white">
+                <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden border-2 border-[#006D68] shrink-0 shadow-xs bg-white">
                   <Image
-                    src={doctorProfile.images.heroDoctor}
+                    src={doctorProfile.images.clinicalDesk}
                     alt={doctorProfile.name}
                     fill
                     sizes="100px"
-                    className="object-cover object-[center_top]"
+                    className="object-cover object-top"
                   />
                 </div>
 
