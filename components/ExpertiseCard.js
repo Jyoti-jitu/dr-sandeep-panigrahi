@@ -11,7 +11,8 @@ export default function ExpertiseCard({ item }) {
           src={item.image}
           alt={item.title}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+          quality={90}
           className="object-cover group-hover:scale-103 transition-transform duration-300"
         />
         <div className="absolute top-2.5 left-2.5 bg-white/90 backdrop-blur-2xs px-2 py-0.5 rounded-xs text-[10px] font-semibold text-[#006D68] uppercase tracking-wide border border-[#E2E8F0]">

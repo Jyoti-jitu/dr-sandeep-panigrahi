@@ -33,7 +33,7 @@ const clinicalServices = [
       "Guidance on individualized periodic laboratory investigations",
       "Family history risk assessment and preventive action plans",
     ],
-    image: "/images/expertise_preventive.png",
+    image: "/images/expertise_hd_preventive.jpg",
   },
   {
     id: "diabetes-lifestyle",
@@ -47,7 +47,7 @@ const clinicalServices = [
       "Aerobic and resistance physical activity prescription",
       "Microvascular and macrovascular complication screening (eyes, kidneys, feet)",
     ],
-    image: "/images/expertise_diabetes.png",
+    image: "/images/expertise_hd_diabetes.jpg",
   },
   {
     id: "lifestyle-management",
