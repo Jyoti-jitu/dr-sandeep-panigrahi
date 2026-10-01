@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary-navy: #102A43;
+    --navy-dark: #0B1D2F;
+    --navy-light: #243B53;
+    --teal-deep: #006D68;
+    --teal-accent: #0F8B83;
+    --teal-light: #E6F4F1;
+    --teal-tint: #F0F7F6;
+    --warm-bg: #F8F7F2;
+    --soft-gray: #F3F5F4;
+    --text-main: #243B53;
+    --text-muted: #627D98;
+    --border-subtle: #E2E8F0;
+    --border-light: #ECEFF1;
+    --white: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #243B53;
+  }
+
+  body {
+    font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #243B53;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+    color: #102A43;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities for the Academic Physician Aesthetic */
+.bg-warm {
+  background-color: #F8F7F2;
+}
+
+.bg-soft-gray {
+  background-color: #F3F5F4;
+}
+
+.bg-teal-light {
+  background-color: #E6F4F1;
+}
+
+.bg-teal-tint {
+  background-color: #F0F7F6;
+}
+
+.bg-primary-navy {
+  background-color: #102A43;
+}
+
+.bg-teal-deep {
+  background-color: #006D68;
+}
+
+.bg-teal-accent {
+  background-color: #0F8B83;
+}
+
+.text-primary-navy {
+  color: #102A43;
+}
+
+.text-navy-dark {
+  color: #0B1D2F;
+}
+
+.text-navy-main {
+  color: #243B53;
+}
+
+.text-teal-deep {
+  color: #006D68;
+}
+
+.text-teal-accent {
+  color: #0F8B83;
+}
+
+.text-muted {
+  color: #627D98;
+}
+
+.border-subtle {
+  border-color: #E2E8F0;
+}
+
+.border-light {
+  border-color: #ECEFF1;
+}
+
+.border-teal-deep {
+  border-color: #006D68;
+}
+
+.border-teal-accent {
+  border-color: #0F8B83;
+}
+
+/* Academic Card Hover effect */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(16, 42, 67, 0.08), 0 8px 10px -6px rgba(16, 42, 67, 0.04);
+  border-color: #CBD5E1;
+}
+
+/* Custom Scrollbar for horizontal credential strip and timeline */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
