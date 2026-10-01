@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Prof. Dr. Sandeep Kumar Panigrahi — Official Website
 
-## Getting Started
+Academic Physician • Professor • Public Health Professional • Researcher  
+Department of Community Medicine, IMS & SUM Hospital, Siksha 'O' Anusandhan (SOA) Deemed to be University, Bhubaneswar, Odisha, India.
 
-First, run the development server:
+---
+
+## 🚀 Technology Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, JavaScript)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **SEO & Metadata**: Semantic HTML5, OpenGraph tags, dynamic XML sitemap (`/sitemap.xml`), and `robots.txt`
+- **Hosting / CDN**: [Cloudflare Pages](https://pages.cloudflare.com/) (Static Export)
+
+---
+
+## ⚡ Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000 in your browser
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ☁️ Deploying to Cloudflare Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository is pre-configured for deployment on **Cloudflare Pages** using Next.js static export (`output: 'export'`).
 
-## Learn More
+### Method 1: Git Integration (Recommended)
 
-To learn more about Next.js, take a look at the following resources:
+1. Go to the [Cloudflare Dashboard](https://dash.cloudflare.com/) > **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
+2. Select this repository.
+3. Configure the **Build Settings**:
+   - **Framework preset**: `Next.js (Static HTML Export)` or `None`
+   - **Build command**: `npm run build`
+   - **Build output directory**: `out`
+   - **Root directory**: `/`
+4. Add **Environment Variables** (under Settings > Environment variables):
+   - `NODE_VERSION`: `20` (or `22`)
+5. Click **Save and Deploy**. Cloudflare Pages will build the site and deploy it globally across 300+ edge locations with free automatic SSL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Method 2: Direct Upload via Wrangler CLI
 
-## Deploy on Vercel
+```bash
+# Build the static export
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Deploy the 'out' directory directly to Cloudflare Pages
+npx wrangler pages deploy out --project-name=drsandeepkumarpanigrahi
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📁 Project Architecture
+
+```
+├── app/
+│   ├── about/             # Curriculum Vitae, milestones & faculty mentorship
+│   ├── appointment/       # Multi-step clinical consultation scheduling
+│   ├── clinical-care/     # Prevention, diabetes care & lifestyle medicine
+│   ├── contact/           # Academic inquiry form & faculty desk contact
+│   ├── health-insights/   # Evidence-based medical articles
+│   ├── media/             # Guest lectures, keynotes & public health speaking
+│   ├── podcast/           # "The Health Conversation" YouTube video studio
+│   ├── publications/      # Peer-reviewed journal publications
+│   ├── research/          # Scientific inquiry themes & empirical studies
+│   ├── api/podcast/       # Prerendered podcast metadata endpoint
+│   ├── layout.js          # Global layout, typography, metadata
+│   ├── page.js            # Landing page
+│   ├── robots.js          # Search engine crawler directives
+│   └── sitemap.js         # Search engine XML sitemap generator
+├── components/            # Reusable UI components & cards
+├── lib/
+│   └── data.js            # Structured data models & physician content
+├── public/
+│   ├── _headers           # Cloudflare Pages security & caching headers
+│   └── images/            # High-resolution clinical, faculty & institute photography
+└── next.config.mjs        # Static export configuration for Cloudflare Pages
+```
+
+---
+
+## 📄 License & Attribution
+
+Copyright © 2026 Prof. Dr. Sandeep Kumar Panigrahi. All rights reserved.

@@ -1,13 +1,11 @@
 import { NextResponse } from "next/server";
 import { podcastData } from "@/lib/data";
 
+export const dynamic = "force-static";
 // Revalidate cache every hour (3600s)
 export const revalidate = 3600;
 
-export async function GET(request) {
-  const { searchParams } = new URL(request.url);
-  const channelId = searchParams.get("channelId");
-
+export async function GET() {
   try {
     // Reference Architecture:
     // If a live YouTube channel ID or playlist ID is provided in production,
