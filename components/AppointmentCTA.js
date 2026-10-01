@@ -6,8 +6,11 @@ import {
   Video,
   RotateCcw,
   ShieldCheck,
+  Hospital,
+  MapPin,
+  CalendarCheck,
 } from "lucide-react";
-import { doctorProfile } from "@/lib/data";
+import { doctorProfile, contactDetails } from "@/lib/data";
 
 export default function AppointmentCTA() {
   return (
@@ -68,24 +71,57 @@ export default function AppointmentCTA() {
             </div>
           </div>
 
-          {/* Right Column: Doctor at laptop image */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-lg overflow-hidden border border-[#E2E8F0] bg-[#F8F7F2] shadow-xs">
-              <div className="relative aspect-4/3 sm:aspect-16/11 w-full overflow-hidden">
-                <Image
-                  src={doctorProfile.images.appointmentDoctor}
-                  alt="Dr. Sandeep Kumar Panigrahi consulting and reviewing clinical cases"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 450px"
-                  className="object-cover object-[center_35%]"
-                />
+          {/* Right Column: Executive Clinical Physician Card */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="w-full max-w-md bg-[#F8F7F2] border border-[#CBD5E1] rounded-2xl overflow-hidden shadow-lg p-5 sm:p-6 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 border-[#006D68] shrink-0 shadow-xs bg-white">
+                  <Image
+                    src={doctorProfile.images.heroDoctor}
+                    alt={doctorProfile.name}
+                    fill
+                    sizes="100px"
+                    className="object-cover object-[center_top]"
+                  />
+                </div>
+
+                <div>
+                  <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#006D68] bg-[#E6F4F1] px-2 py-0.5 rounded-full border border-[#BCE3DE]">
+                    <ShieldCheck className="w-3 h-3" />
+                    Verified Academic Physician
+                  </span>
+                  <h3 className="font-serif font-bold text-base sm:text-lg text-[#102A43] leading-snug mt-1">
+                    Prof. Dr. Sandeep Kumar Panigrahi
+                  </h3>
+                  <p className="text-[11px] text-[#627D98] font-medium mt-0.5">
+                    MBBS • MD • Fellowship in Diabetes (UK)
+                  </p>
+                </div>
               </div>
-              <div className="p-3 bg-white/95 border-t border-[#E2E8F0] flex items-center justify-between text-xs text-[#627D98]">
-                <span className="flex items-center gap-1.5 font-medium text-[#243B53]">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#006D68]" />
-                  Verified Academic Physician
-                </span>
-                <span>Bhubaneswar, Odisha</span>
+
+              <div className="pt-3 border-t border-[#E2E8F0] space-y-2 text-xs text-[#243B53]">
+                <div className="flex items-start gap-2">
+                  <Hospital className="w-3.5 h-3.5 text-[#006D68] shrink-0 mt-0.5" />
+                  <span>{contactDetails.hospital}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-[#006D68] shrink-0 mt-0.5" />
+                  <span className="text-[#627D98]">{contactDetails.cityState}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CalendarCheck className="w-3.5 h-3.5 text-[#006D68] shrink-0 mt-0.5" />
+                  <span>Mon – Sat: In-Person & Teleconsultations</span>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <Link
+                  href="/appointment"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#006D68] hover:bg-[#0F8B83] text-white text-xs font-semibold rounded-md shadow-xs transition-colors"
+                >
+                  <span>Schedule Consultation</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
           </div>

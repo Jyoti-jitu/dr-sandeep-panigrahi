@@ -5,14 +5,14 @@ import { doctorProfile } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section className="relative bg-white pt-6 pb-12 sm:pt-10 sm:pb-16 lg:py-16 border-b border-[#E2E8F0]">
+    <section className="relative bg-white pt-8 pb-12 sm:pt-12 sm:pb-16 lg:py-16 border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column (Approx 45%) */}
           <div className="lg:col-span-5 flex flex-col justify-center order-1">
             {/* Eyebrow */}
             <div className="mb-3">
-              <span className="inline-block text-[11px] sm:text-xs font-bold tracking-wider text-[#006D68] uppercase">
+              <span className="inline-block text-[11px] sm:text-xs font-bold tracking-widest text-[#006D68] uppercase">
                 {doctorProfile.eyebrow}
               </span>
             </div>
@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
 
             {/* Credentials */}
-            <div className="mt-4 pt-2 border-t border-[#E2E8F0]/60">
+            <div className="mt-4 pt-2 border-t border-[#E2E8F0]">
               <p className="text-xs sm:text-sm font-semibold text-[#006D68] tracking-normal">
                 {doctorProfile.credentialsText}
               </p>
@@ -67,26 +67,24 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column (Approx 55%) - Photo with Quote Card */}
-          <div className="lg:col-span-7 relative order-2">
-            <div className="relative rounded-lg overflow-hidden border border-[#E2E8F0] bg-[#F8F7F2] shadow-sm max-w-lg lg:max-w-none mx-auto">
-              <div className="relative aspect-4/3 sm:aspect-16/10 lg:aspect-16/11 w-full overflow-hidden">
-                <Image
-                  src={doctorProfile.images.heroDoctor}
-                  alt="Prof. Dr. Sandeep Kumar Panigrahi - Physician and Medical Professor"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
-                  className="object-cover object-[center_22%]"
-                />
-              </div>
+          {/* Right Column (Approx 55%) - Portrait with Quote Card */}
+          <div className="lg:col-span-7 relative order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md lg:max-w-lg aspect-3/4 sm:aspect-4/5 rounded-2xl overflow-hidden border border-[#CBD5E1] bg-[#F8F7F2] shadow-xl">
+              <Image
+                src={doctorProfile.images.heroDoctor}
+                alt="Prof. Dr. Sandeep Kumar Panigrahi - Physician, Professor and Public Health Researcher"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
+                className="object-cover object-[center_top]"
+              />
 
               {/* Overlapping Quote Card */}
-              <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-5 max-w-[210px] sm:max-w-[260px] bg-white/95 backdrop-blur-xs p-3.5 sm:p-4 rounded-md shadow-md border border-[#E2E8F0]">
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 max-w-[210px] sm:max-w-[250px] bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-xl shadow-lg border border-[#E2E8F0]">
                 <div className="text-[#006D68] text-xl font-serif font-bold leading-none mb-1">
                   “
                 </div>
-                <p className="font-serif italic text-xs sm:text-sm text-[#102A43] leading-snug">
+                <p className="font-serif italic text-xs sm:text-[13px] text-[#102A43] leading-snug font-medium">
                   {doctorProfile.quote}
                 </p>
                 <div className="mt-2.5 pt-2 border-t border-[#ECEFF1] flex items-center justify-between">
