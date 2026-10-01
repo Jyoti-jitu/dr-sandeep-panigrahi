@@ -77,7 +77,7 @@ export default function AppointmentCTA() {
                   alt="Dr. Sandeep Kumar Panigrahi consulting and reviewing clinical cases"
                   fill
                   sizes="(max-width: 768px) 100vw, 450px"
-                  className="object-cover object-center"
+                  className="object-cover object-[center_35%]"
                 />
               </div>
               <div className="p-3 bg-white/95 border-t border-[#E2E8F0] flex items-center justify-between text-xs text-[#627D98]">
