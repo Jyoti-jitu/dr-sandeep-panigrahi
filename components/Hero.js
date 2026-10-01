@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative bg-white pt-8 pb-12 sm:pt-12 sm:pb-16 lg:py-16 border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column (Approx 45%) */}
           <div className="lg:col-span-5 flex flex-col justify-center order-1">
             {/* Eyebrow */}
@@ -67,31 +67,31 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column (Approx 55%) - Portrait with Quote Card */}
+          {/* Right Column (Approx 55%) - New Executive Doctor Photo with Quote Card */}
           <div className="lg:col-span-7 relative order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-lg aspect-3/4 sm:aspect-4/5 rounded-2xl overflow-hidden border border-[#CBD5E1] bg-[#F8F7F2] shadow-xl">
+            <div className="relative w-full max-w-xl aspect-3/2 sm:aspect-16/10 rounded-2xl overflow-hidden border border-[#CBD5E1] bg-[#F8F7F2] shadow-xl">
               <Image
                 src={doctorProfile.images.heroDoctor}
-                alt="Prof. Dr. Sandeep Kumar Panigrahi - Physician, Professor and Public Health Researcher"
+                alt="Prof. Dr. Sandeep Kumar Panigrahi in medical consultation clinic with stethoscope, laptop and clinical literature"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
-                className="object-cover object-[center_top]"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 700px"
+                className="object-cover object-center"
               />
 
               {/* Overlapping Quote Card */}
-              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 max-w-[210px] sm:max-w-[250px] bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-xl shadow-lg border border-[#E2E8F0]">
-                <div className="text-[#006D68] text-xl font-serif font-bold leading-none mb-1">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 max-w-[190px] sm:max-w-[230px] bg-white/95 backdrop-blur-md p-3 sm:p-3.5 rounded-xl shadow-lg border border-[#E2E8F0]">
+                <div className="text-[#006D68] text-lg font-serif font-bold leading-none mb-0.5">
                   “
                 </div>
-                <p className="font-serif italic text-xs sm:text-[13px] text-[#102A43] leading-snug font-medium">
+                <p className="font-serif italic text-xs sm:text-[12px] text-[#102A43] leading-snug font-medium">
                   {doctorProfile.quote}
                 </p>
-                <div className="mt-2.5 pt-2 border-t border-[#ECEFF1] flex items-center justify-between">
-                  <span className="font-serif text-xs font-semibold text-[#006D68] italic tracking-wide">
+                <div className="mt-2 pt-1.5 border-t border-[#ECEFF1] flex items-center justify-between">
+                  <span className="font-serif text-[11px] font-bold text-[#006D68] italic tracking-wide">
                     {doctorProfile.signature}
                   </span>
-                  <div className="h-0.5 w-6 bg-[#006D68] rounded-full" />
+                  <div className="h-0.5 w-5 bg-[#006D68] rounded-full" />
                 </div>
               </div>
             </div>
