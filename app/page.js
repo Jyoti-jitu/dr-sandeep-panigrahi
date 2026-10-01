@@ -69,10 +69,11 @@ export default function HomePage() {
                 <div className="relative aspect-3/4 w-full rounded-md overflow-hidden border border-[#E2E8F0] shadow-2xs bg-[#F8F7F2]">
                   <Image
                     src={doctorProfile.images.aboutDoctor}
-                    alt="Prof. Dr. Sandeep Kumar Panigrahi standing in clinic"
+                    alt="Prof. Dr. Sandeep Kumar Panigrahi in clinical coat"
                     fill
                     sizes="(max-width: 640px) 100vw, 250px"
-                    className="object-cover object-[center_15%]"
+                    className="object-cover object-center"
+                    priority
                   />
                 </div>
               </div>
