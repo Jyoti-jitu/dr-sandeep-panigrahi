@@ -57,7 +57,7 @@ export default function AboutPage() {
                     alt="Prof. Dr. Sandeep Kumar Panigrahi official academic portrait"
                     fill
                     sizes="(max-width: 768px) 100vw, 450px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_20%]"
                   />
                 </div>
                 <div className="p-4 bg-white border-t border-[#E2E8F0]">

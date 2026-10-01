@@ -43,13 +43,13 @@ export default function Timeline({ isPreview = false, limit = 6 }) {
 
               {/* Institution Image */}
               {item.image && (
-                <div className="mt-3 relative h-16 w-full rounded-sm overflow-hidden bg-[#F3F5F4] border border-[#ECEFF1]">
+                <div className="mt-3 relative aspect-16/10 w-full rounded-sm overflow-hidden bg-[#F3F5F4] border border-[#ECEFF1]">
                   <Image
                     src={item.image}
                     alt={item.institution}
                     fill
-                    sizes="(max-width: 768px) 100vw, 200px"
-                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 220px"
+                    className="object-cover group-hover:scale-103 transition-transform duration-300"
                   />
                 </div>
               )}

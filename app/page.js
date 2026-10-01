@@ -72,7 +72,7 @@ export default function HomePage() {
                     alt="Prof. Dr. Sandeep Kumar Panigrahi standing in clinic"
                     fill
                     sizes="(max-width: 640px) 100vw, 250px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_15%]"
                   />
                 </div>
               </div>
